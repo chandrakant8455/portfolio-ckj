@@ -1,47 +1,31 @@
+'use client'
+
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { ArrowUpRight, Award, BookOpen, BriefcaseBusiness, Check, Code2, ExternalLink, GraduationCap, Mail, Menu, Moon, Play, Send, Sparkles, Sun, X } from 'lucide-react'
+import { portfolio } from '@/lib/portfolio-data'
+
+const nav = [['About','about'],['Skills','skills'],['Projects','projects'],['Internships','internships'],['Achievements','achievements'],['Education','education'],['Resume','resume'],['Contact','contact']]
+const icons = [Code2, Sparkles, BookOpen, BriefcaseBusiness, Award]
+const reveal = { hidden: { opacity: 0, y: 22 }, show: { opacity: 1, y: 0, transition: { duration: .55 } } }
+function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) { return <motion.section id={id} className="section-wrap" variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-80px' }}><div className="section-heading"><span className="eyebrow">{eyebrow}</span><h2>{title}</h2></div>{children}</motion.section> }
+function Pill({ children }: { children: React.ReactNode }) { return <span className="pill">{children}</span> }
+
 export default function Page() {
-  return (
-    <main
-      style={{
-        colorScheme: 'light dark',
-        position: 'relative',
-        display: 'flex',
-        minHeight: '100vh',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'light-dark(#fff, #000)',
-        color: 'light-dark(#000, #fff)',
-      }}
-    >
-      <svg
-        aria-hidden="true"
-        style={{ width: 80, height: 80 }}
-        width={80}
-        height={80}
-        fill="none"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="currentColor"
-        strokeWidth="0.5"
-      >
-        <path
-          d="M14.2 14.2H17V6.9375C17 4.76288 15.2371 3 13.0625 3H5.8V5.8M14.2 14.2V7.79063L7.79062 14.2H14.2ZM14.2 14.2V17H6.9375C4.76288 17 3 15.2371 3 13.0625V5.8H5.8M5.8 5.8V12.2313L12.2313 5.8H5.8Z"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <p
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 'calc(50% + 56px)',
-          transform: 'translateX(-50%)',
-          whiteSpace: 'nowrap',
-          fontSize: '14px',
-          fontWeight: 500,
-          color: 'light-dark(#71717a, #a1a1aa)',
-        }}
-      >
-        Your v0 generation will show here.
-      </p>
-    </main>
-  )
+  const [menu, setMenu] = useState(false); const [light, setLight] = useState(false); const [sent, setSent] = useState(false)
+  const toggle = () => { setLight(!light); document.documentElement.classList.toggle('light', !light) }
+  return <div className={light ? 'site light' : 'site'}>
+    <header className="nav"><a href="#home" className="logo">{portfolio.initials}<span>.</span></a><nav className={menu ? 'nav-links open' : 'nav-links'}>{nav.map(([label,id]) => <a key={id} href={id === 'resume' ? portfolio.resumeUrl : `#${id}`} onClick={() => setMenu(false)}>{label}</a>)}</nav><div className="nav-actions"><button className="icon-btn" aria-label="Toggle theme" onClick={toggle}>{light ? <Moon size={17}/> : <Sun size={17}/>}</button><a className="resume-small" href={portfolio.resumeUrl}>Resume <ArrowUpRight size={15}/></a><button className="menu-btn icon-btn" aria-label="Toggle menu" onClick={() => setMenu(!menu)}>{menu ? <X size={20}/> : <Menu size={20}/>}</button></div></header>
+    <main>
+      <section id="home" className="hero"><div className="hero-copy"><div className="status"><i/> {portfolio.availability}</div><p className="eyebrow">Hello, I&apos;m</p><h1>{portfolio.name.split(' ')[0]}<br/><em>{portfolio.name.split(' ').slice(1).join(' ')}</em></h1><p className="hero-title">{portfolio.title}</p><p className="hero-desc">{portfolio.bio}</p><div className="hero-actions"><a className="button primary" href="#projects">View My Projects <ArrowUpRight size={17}/></a><a className="button secondary" href={portfolio.resumeUrl}>Download Resume <ArrowUpRight size={17}/></a></div><div className="socials"><span>Find me on</span><a href={portfolio.socials.github} aria-label="GitHub"><Code2 size={18}/></a><a href={portfolio.socials.linkedin} aria-label="LinkedIn"><BriefcaseBusiness size={18}/></a><a href={`mailto:${portfolio.email}`} aria-label="Email"><Mail size={18}/></a></div></div><div className="hero-visual"><div className="orbit orbit-one"/><div className="orbit orbit-two"/><div className="profile-wrap"><img src={portfolio.profileImage} alt={`${portfolio.name} profile portrait`} /></div><div className="floating-card"><span className="mini-icon"><Code2 size={16}/></span><div><strong>2nd Year</strong><small>B.Tech CSE</small></div></div><span className="spark spark-a">✦</span><span className="spark spark-b">+</span></div></section>
+      <Section id="about" eyebrow="01 / About me" title="Learning in public, building with purpose."><div className="about-grid"><div><p className="big-copy">{portfolio.about}</p><p className="muted">My portfolio is a snapshot of the questions I&apos;m exploring, the tools I&apos;m practicing, and the small ideas I&apos;m turning into working software.</p></div><div className="stats">{[['2nd Year','B.Tech CSE'],['AI & ML','Specialization / Interest'],['Projects','Growing Portfolio'],['Learning','Every Day']].map(([a,b]) => <div className="stat" key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></div></Section>
+      <Section id="skills" eyebrow="02 / Toolkit" title="Technologies I&apos;m exploring."><div className="skills-layout"><div className="skill-grid">{Object.entries(portfolio.skills).map(([cat,items],i) => { const Icon=icons[i]; return <div className="glass skill-group" key={cat}><div className="group-head"><Icon size={18}/><span>{cat === 'ai' ? 'AI / ML' : cat === 'web' ? 'Web Development' : cat[0].toUpperCase()+cat.slice(1)}</span></div><div className="pills">{items.map(x=><Pill key={x}>{x}</Pill>)}</div></div> })}</div><div className="learning-panel"><div className="eyebrow">Currently learning</div>{['Data Structures & Algorithms','Machine Learning','React','SQL','Deep Learning'].map((x,i)=><div className="learn-line" key={x}><span><i/> {x}</span><span className="in-progress">in progress</span></div>)}</div></div></Section>
+      <Section id="projects" eyebrow="03 / Selected work" title="Small projects, real lessons."><div className="project-grid">{portfolio.projects.map(([title,desc,tags],i)=><motion.article className="project-card glass" whileHover={{ y: -6 }} key={title}><div className={`project-art art-${i}`}><span>{['01','02','03','04'][i]}</span><Code2 size={42}/></div><div className="project-body"><div className="placeholder-label">Sample project · replace with your work</div><h3>{title}</h3><p>{desc}</p><div className="project-foot"><div className="tagline">{tags}</div><div className="card-links"><a href="#contact" aria-label={`GitHub for ${title}`}><Code2 size={17}/></a><a href="#contact" aria-label={`Live demo for ${title}`}><ExternalLink size={17}/></a></div></div></div></motion.article>)}</div></Section>
+      <Section id="internships" eyebrow="04 / Experience in progress" title="Learning beyond the classroom."><div className="timeline">{portfolio.internships.map(([role,org,duration,skills,desc])=><div className="timeline-item glass" key={role}><div className="timeline-dot"/><div className="timeline-top"><div><span className="placeholder-label">Placeholder — replace details</span><h3>{role}</h3><p className="accent-text">{org}</p></div><span className="date">{duration}</span></div><p>{desc}</p><div className="pills">{skills.split(' · ').map(s=><Pill key={s}>{s}</Pill>)}</div><a className="text-link" href="#contact">Certificate available? Add link <ArrowUpRight size={15}/></a></div>)}</div></Section>
+      <div className="split-sections"><Section id="education" eyebrow="05 / Education" title="The foundation I&apos;m growing."><div className="education-card glass"><GraduationCap size={25}/><h3>{portfolio.education.degree}</h3><p className="accent-text">{portfolio.education.university}</p><div className="edu-meta"><span>{portfolio.education.year}</span><span>{portfolio.education.status}</span></div><p className="muted">CGPA: {portfolio.education.cgpa}</p><div className="subject-list">{['Data Structures','OOP','DBMS','Computer Networks','Operating Systems','AI / ML'].map(x=><Pill key={x}>{x}</Pill>)}</div></div></Section><Section id="achievements" eyebrow="06 / Milestones" title="Moments worth documenting."><div className="achievement-grid">{portfolio.achievements.map((x,i)=><div className="achievement glass" key={x}><span>0{i+1}</span><Award size={19}/><h3>{x}</h3><p>Placeholder — add your result, event, or story.</p></div>)}</div></Section></div>
+      <Section id="certifications" eyebrow="07 / Certifications" title="Proof of the practice." ><div className="cert-grid">{portfolio.certificates.map(([title,org,date])=><div className="cert-card glass" key={title}><div className="cert-image"><Award size={30}/></div><span className="placeholder-label">Placeholder certificate</span><h3>{title}</h3><p>{org} · {date}</p><a href="#contact" className="text-link">View certificate <ArrowUpRight size={15}/></a></div>)}</div></Section>
+      <Section id="learning" eyebrow="08 / The journey" title="Always one concept ahead."><div className="learning-grid">{portfolio.learning.map(([title,desc])=><div className="learning-card glass" key={title}><div className="learning-icon"><Sparkles size={17}/></div><h3>{title}</h3><p>{desc}</p><div className="progress-track"><span/></div></div>)}</div></Section>
+      <Section id="contact" eyebrow="09 / Say hello" title="Let&apos;s build something together."><div className="contact-grid"><div><p className="big-copy">{`I'm always interested in learning, collaborating on projects, participating in hackathons, and exploring new technologies.`}</p><div className="contact-list"><a href={`mailto:${portfolio.email}`}><Mail size={19}/><span><small>Email</small>{portfolio.email}</span></a><a href={portfolio.socials.github}><Code2 size={19}/><span><small>GitHub</small>@yourusername</span></a><a href={portfolio.socials.linkedin}><BriefcaseBusiness size={19}/><span><small>LinkedIn</small>/in/yourusername</span></a><div><BookOpen size={19}/><span><small>Location</small>{portfolio.location}</span></div></div></div><form className="contact-form glass" onSubmit={e=>{e.preventDefault();setSent(true)}}>{sent ? <div className="sent"><Check size={30}/><h3>Message ready to send.</h3><p>Connect a form endpoint to receive submissions.</p><button className="button secondary" type="button" onClick={()=>setSent(false)}>Send another</button></div> : <><input required placeholder="Name" aria-label="Name"/><input required type="email" placeholder="Email" aria-label="Email"/><input required placeholder="Subject" aria-label="Subject"/><textarea required placeholder="Message" aria-label="Message" rows={5}/><button className="button primary" type="submit">Send Message <Send size={16}/></button></>}</form></div></Section>
+    </main><footer><a href="#home" className="logo">{portfolio.initials}<span>.</span></a><p>Built with curiosity, code, and continuous learning.</p><div className="socials"><a href={portfolio.socials.github}><Code2 size={17}/></a><a href={portfolio.socials.linkedin}><BriefcaseBusiness size={17}/></a><a href={`mailto:${portfolio.email}`}><Mail size={17}/></a></div><small>© 2026 Chandra Kanta Jena. All rights reserved.</small></footer>
+  </div>
 }
