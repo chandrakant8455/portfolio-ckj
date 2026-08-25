@@ -7,13 +7,13 @@ export const portfolio = {
   about: "I'm a 2nd-year B.Tech Computer Science and Engineering student interested in Artificial Intelligence, Machine Learning, software development, and problem solving. I enjoy learning new technologies and turning ideas into practical projects.",
   profileImage: '/profile-student.png',
   resumeUrl: '#resume-placeholder',
-  email: 'your.email@example.com',
+  email: 'chandrakant9078@gmail.com',
   location: '[Your Location]',
-  socials: { github: 'https://github.com/yourusername', linkedin: 'https://linkedin.com/in/yourusername' },
+  socials: { github: 'https://github.com/chandrakant8455', linkedin: 'https://www.linkedin.com/in/chandra-kanta-jena16/' },
   skills: {
     programming: ['Python', 'C', 'C++', 'JavaScript'],
-    web: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS'],
-    ai: ['Machine Learning', 'Artificial Intelligence', 'NumPy', 'Pandas', 'Scikit-learn'],
+    web: ['HTML', 'CSS', 'JavaScript'],
+    ai: ['Machine Learning', 'Artificial Intelligence', 'NumPy', 'Pandas'],
     tools: ['Git', 'GitHub', 'VS Code', 'Figma', 'Canva'],
   },
   learning: [
