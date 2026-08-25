@@ -31,7 +31,7 @@ export const portfolio = {
   internships: [['Web Development Intern', 'Organization Name', 'May 2026 – June 2026', 'HTML · CSS · JavaScript · Git', 'Worked on web development tasks and learned practical concepts related to responsive design, frontend development and version control.']],
   education: { degree: 'B.Tech Computer Science & Engineering', university: '[University Name]', year: '2025 – 2029', status: 'Currently pursuing', cgpa: '[Your CGPA]' },
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
-  certificates: [['Certificate title', 'Issuing organization', '[Date]'], ['Another certificate', 'Issuing organization', '[Date]']],
+  certificates: [['AI Fundamentals-Google', 'COURSERA', '2026'], ['ntroduction to Structured Query Language (SQL)-University of Michigan', 'COURSERA', '2026']],
 } as const
 
 export type Portfolio = typeof portfolio
