@@ -28,10 +28,10 @@ export const portfolio = {
     ['To-Do List Web App', 'A simple productivity application for managing daily tasks.', 'HTML · CSS · JavaScript'],
     ['Weather Application', 'A weather application that retrieves real-time weather information using an API.', 'HTML · CSS · JavaScript · Weather API'],
   ],
-  internships: [['Web Development Intern', 'Organization Name', 'May 2026 – June 2026', 'HTML · CSS · JavaScript · Git', 'Worked on web development tasks and learned practical concepts related to responsive design, frontend development and version control.']],
-  education: { degree: 'B.Tech Computer Science & Engineering', university: '[University Name]', year: '2025 – 2029', status: 'Currently pursuing', cgpa: '[Your CGPA]' },
+  internships: [['AI ML INTERN', '3skill', 'Aug 2026 – Sept 2026', 'Pyton - Numpy - Pandas - Matplotlib', 'Gaining hands-on experience in Artificial Intelligence and Machine Learning through Python, data preprocessing, data analysis, machine learning models, and practical projects. Working with real-world datasets to develop and evaluate AI/ML solutions.']],
+  education: { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', status: 'Currently pursuing'},
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
-  certificates: [['AI Fundamentals-Google', 'COURSERA', '2026'], ['ntroduction to Structured Query Language (SQL)-University of Michigan', 'COURSERA', '2026']],
+  certificates: [['AI Fundamentals - Google', 'COURSERA', '2026'], ['Introduction to Structured Query Language (SQL) - University of Michigan', 'COURSERA', '2026']],
 } as const
 
 export type Portfolio = typeof portfolio
