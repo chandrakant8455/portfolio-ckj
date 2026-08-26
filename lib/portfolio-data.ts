@@ -33,7 +33,7 @@ export const portfolio = {
   internships: [['AI ML INTERN', '3skill', 'Aug 2026 – Sept 2026', 'Pyton - Numpy - Pandas - Matplotlib', 'Gaining hands-on experience in Artificial Intelligence and Machine Learning through Python, data preprocessing, data analysis, machine learning models, and practical projects. Working with real-world datasets to develop and evaluate AI/ML solutions.']],
   education: { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', status: 'Currently pursuing'},
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
-  certificates: [['AI Fundamentals - Google', 'COURSERA', '2026'], ['Introduction to Structured Query Language (SQL) - University of Michigan', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026']],
+  certificates: [<img scr ="/profile-student.png",['AI Fundamentals - Google', 'COURSERA', '2026'], ['Introduction to Structured Query Language (SQL) - University of Michigan', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026']],
 } as const
 
 export type Portfolio = typeof portfolio
