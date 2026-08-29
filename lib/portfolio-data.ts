@@ -40,7 +40,7 @@ export const portfolio = {
     { title: 'AI Fundamentals - Google', issuer: 'Coursera', year: '2026', image: 'Ai fundamentals_page-0001.jpg', certificateUrl: 'https://drive.google.com/file/d/1KGEURIDYtCMa5zJK6HPFxZvpf3mstFrc/view?usp=sharing' },
     { title: 'Introduction to Structured Query Language (SQL) - University of Michigan', issuer: 'Coursera', year: '2026', image: '/SQL_page-0001.jpg', certificateUrl: 'https://drive.google.com/file/d/1F66vcYuxYsbuB84BUvUY_c0BqUsUi6G9/view?usp=sharing' },
     { title: 'Introductio to Python', issuer: 'Infosys SpringBoard', year: '2026', image: '/py1_page-0001.jpg', certificateUrl: 'https://drive.google.com/file/d/1C37hm0E3xn3JuvJaiSXGDOFbzAono3aQ/view?usp=sharing' },
-    { title: 'C Programming Language', issuer: 'iamneo - An NIIT Venture(LPU)', year: '2026', image: '/C prog.jpg', certificateUrl: 'https://drive.google.com/file/d/14MOK4PMjRwraZ8pWpRhzfqWtQmeCH21D/view?usp=sharing' },
+    { title: 'C Programming Language', issuer: 'iamneo - An NIIT Venture', year: '2026', image: '/C prog.jpg', certificateUrl: 'https://drive.google.com/file/d/14MOK4PMjRwraZ8pWpRhzfqWtQmeCH21D/view?usp=sharing' },
   ],
 } as const
 
