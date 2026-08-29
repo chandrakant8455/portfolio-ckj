@@ -1,6 +1,6 @@
 export const portfolio = {
   name: 'Chandra Kanta Jena',
-  initials: 'CKJ',
+  initials: 'Portfolio',
   title: 'B.Tech CSE | AI & ML Student',
   availability: 'Open to learning, building & collaborating',
   bio: 'Passionate about programming, artificial intelligence, machine learning, web development, and building real-world projects. Currently learning, experimenting, and improving my skills every day.',
