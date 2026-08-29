@@ -30,6 +30,11 @@ export const portfolio = {
   ],
   internships: [['AI ML INTERN', '3skill', 'Aug 2026 – Sept 2026', 'Pyton - Numpy - Pandas - Matplotlib', 'Gaining hands-on experience in Artificial Intelligence and Machine Learning through Python, data preprocessing, data analysis, machine learning models, and practical projects. Working with real-world datasets to develop and evaluate AI/ML solutions.']],
   education: { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', status: 'Currently pursuing'},
+  educationTimeline: [
+    { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', detail: 'Currently pursuing' },
+    { degree: '12th Class', university: '[School/College Name]', year: '[Year]', detail: '[Stream / Percentage]' },
+    { degree: '10th Class', university: '[School Name]', year: '[Year]', detail: '[Percentage]' },
+  ],
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
   certificates: [
     { title: 'AI Fundamentals - Google', issuer: 'Coursera', year: '2026', image: 'Ai fundamentals_page-0001.jpg', certificateUrl: 'https://drive.google.com/file/d/1KGEURIDYtCMa5zJK6HPFxZvpf3mstFrc/view?usp=sharing' },
