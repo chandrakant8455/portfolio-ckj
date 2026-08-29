@@ -23,7 +23,7 @@ export const portfolio = {
     ['Web Development', 'Building responsive and interactive websites.'],
   ],
   projects: [
-    { title: 'Personal Portfolio', description: 'A responsive portfolio website built to showcase skills, projects, education and achievements.', tags: 'HTML · CSS · JavaScript / React', image: '/projects/personal-portfolio.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
+    { title: 'Water Quality Awareness Tool', description: 'An interactive web application developed to increase awareness about water quality, common contaminants, and their potential health and environmental impacts. The tool presents water-related information in a simple and user-friendly way, helping users understand water quality risks and adopt safer water practices', tags: 'HTML · CSS · JavaScript / React', image: '/projects/personal-portfolio.png', githubUrl: 'https://github.com/chandrakant8455/waterqualityawarenesstool', demoUrl: 'https://dist-ehusyvpg.devinapps.com/' },
     { title: 'Student Management System', description: 'A student management application for adding, updating, deleting and viewing student records.', tags: 'Python · File Handling / SQLite', image: '/projects/student-management.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
     { title: 'To-Do List Web App', description: 'A simple productivity application for managing daily tasks.', tags: 'HTML · CSS · JavaScript', image: '/projects/todo-list.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
     { title: 'Weather Application', description: 'A weather application that retrieves real-time weather information using an API.', tags: 'HTML · CSS · JavaScript · Weather API', image: '/projects/weather-app.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
@@ -32,10 +32,10 @@ export const portfolio = {
   education: { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', status: 'Currently pursuing'},
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
   certificates: [
-    { title: 'AI Fundamentals - Google', issuer: 'Coursera', year: '2026', image: '', certificateUrl: '' },
-    { title: 'Introduction to Structured Query Language (SQL) - University of Michigan', issuer: 'Coursera', year: '2026', image: '', certificateUrl: '' },
-    { title: 'Certificate title', issuer: 'Issuing platform', year: 'Year', image: '', certificateUrl: '' },
-    { title: 'Certificate title', issuer: 'Issuing platform', year: 'Year', image: '', certificateUrl: '' },
+    { title: 'AI Fundamentals - Google', issuer: 'Coursera', year: '2026', image: 'Ai fundamentals_page-0001.jpg', certificateUrl: 'https://drive.google.com/file/d/1KGEURIDYtCMa5zJK6HPFxZvpf3mstFrc/view?usp=sharing' },
+    { title: 'Introduction to Structured Query Language (SQL) - University of Michigan', issuer: 'Coursera', year: '2026', image: '/SQL_page-0001.jpg', certificateUrl: 'https://drive.google.com/file/d/1F66vcYuxYsbuB84BUvUY_c0BqUsUi6G9/view?usp=sharing' },
+    { title: 'Introductio to Python', issuer: 'Infosys SpringBoard', year: '2026', image: '/py1_page-0001.jpg', certificateUrl: 'https://drive.google.com/file/d/1C37hm0E3xn3JuvJaiSXGDOFbzAono3aQ/view?usp=sharing' },
+    { title: 'C Programming Language', issuer: 'iamneo - An NIIT Venture(LPU)', year: '2026', image: '/C prog.jpg', certificateUrl: 'https://drive.google.com/file/d/14MOK4PMjRwraZ8pWpRhzfqWtQmeCH21D/view?usp=sharing' },
   ],
 } as const
 
