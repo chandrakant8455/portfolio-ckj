@@ -31,9 +31,9 @@ export const portfolio = {
   internships: [['AI ML INTERN - 3SKILL', '3skill', 'Aug 2026 – Sept 2026', 'Pyton - Numpy - Pandas - Matplotlib', 'Gaining hands-on experience in Artificial Intelligence and Machine Learning through Python, data preprocessing, data analysis, machine learning models, and practical projects. Working with real-world datasets to develop and evaluate AI/ML solutions.']],
   education: { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', status: 'Currently pursuing'},
   educationTimeline: [
-    { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', detail: 'Currently pursuing' },
-    { degree: '12th Class', university: '[School/College Name]', year: '[Year]', detail: '[Stream/Percentage — edit later]' },
-    { degree: '10th Class', university: '[School Name]', year: '[Year]', detail: '[Percentage — edit later]' },
+    { degree: 'B.Tech Computer Science & Engineering - AI/ML', university: 'Lovely Professional University', year: '2025 – 2029', detail: 'Currently pursuing' },
+    { degree: 'Heigher Secondary Education', university: 'Jhadeshwar International School', year: '2022 – 2024', detail: 'CBSE' },
+    { degree: 'Secondary Education', university: "St 'James Convent School", year: '2014 – 2022', detail: 'ICSE' },
   ],
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
   certificates: [
