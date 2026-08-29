@@ -1,5 +1,3 @@
-import { Certificate } from "crypto"
-
 export const portfolio = {
   name: 'Chandra Kanta Jena',
   initials: 'CKJ',
@@ -33,7 +31,12 @@ export const portfolio = {
   internships: [['AI ML INTERN', '3skill', 'Aug 2026 – Sept 2026', 'Pyton - Numpy - Pandas - Matplotlib', 'Gaining hands-on experience in Artificial Intelligence and Machine Learning through Python, data preprocessing, data analysis, machine learning models, and practical projects. Working with real-world datasets to develop and evaluate AI/ML solutions.']],
   education: { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', status: 'Currently pursuing'},
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
-  certificates: [['AI Fundamentals - Google', 'COURSERA', '2026'], ['Introduction to Structured Query Language (SQL) - University of Michigan', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026']],
+  certificates: [
+    { title: 'AI Fundamentals - Google', issuer: 'Coursera', year: '2026', image: '', certificateUrl: '' },
+    { title: 'Introduction to Structured Query Language (SQL) - University of Michigan', issuer: 'Coursera', year: '2026', image: '', certificateUrl: '' },
+    { title: 'Certificate title', issuer: 'Issuing platform', year: 'Year', image: '', certificateUrl: '' },
+    { title: 'Certificate title', issuer: 'Issuing platform', year: 'Year', image: '', certificateUrl: '' },
+  ],
 } as const
 
 export type Portfolio = typeof portfolio
