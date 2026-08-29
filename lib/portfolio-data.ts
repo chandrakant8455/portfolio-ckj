@@ -25,15 +25,15 @@ export const portfolio = {
     ['Web Development', 'Building responsive and interactive websites.'],
   ],
   projects: [
-    ['Personal Portfolio', 'A responsive portfolio website built to showcase skills, projects, education and achievements.', 'HTML · CSS · JavaScript / React'],
-    ['Student Management System', 'A student management application for adding, updating, deleting and viewing student records.', 'Python · File Handling / SQLite'],
-    ['To-Do List Web App', 'A simple productivity application for managing daily tasks.', 'HTML · CSS · JavaScript'],
-    ['Weather Application', 'A weather application that retrieves real-time weather information using an API.', 'HTML · CSS · JavaScript · Weather API'],
+    { title: 'Personal Portfolio', description: 'A responsive portfolio website built to showcase skills, projects, education and achievements.', tags: 'HTML · CSS · JavaScript / React', image: '/projects/personal-portfolio.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
+    { title: 'Student Management System', description: 'A student management application for adding, updating, deleting and viewing student records.', tags: 'Python · File Handling / SQLite', image: '/projects/student-management.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
+    { title: 'To-Do List Web App', description: 'A simple productivity application for managing daily tasks.', tags: 'HTML · CSS · JavaScript', image: '/projects/todo-list.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
+    { title: 'Weather Application', description: 'A weather application that retrieves real-time weather information using an API.', tags: 'HTML · CSS · JavaScript · Weather API', image: '/projects/weather-app.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
   ],
   internships: [['AI ML INTERN', '3skill', 'Aug 2026 – Sept 2026', 'Pyton - Numpy - Pandas - Matplotlib', 'Gaining hands-on experience in Artificial Intelligence and Machine Learning through Python, data preprocessing, data analysis, machine learning models, and practical projects. Working with real-world datasets to develop and evaluate AI/ML solutions.']],
   education: { degree: 'B.Tech Computer Science & Engineering', university: 'Lovely Professional University', year: '2025 – 2029', status: 'Currently pursuing'},
   achievements: ['Coding achievements', 'Hackathons', 'SIH participation', 'Certifications', 'Workshops', 'Technical competitions'],
-  certificates: [<img scr ="/profile-student.png",['AI Fundamentals - Google', 'COURSERA', '2026'], ['Introduction to Structured Query Language (SQL) - University of Michigan', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026']],
+  certificates: [['AI Fundamentals - Google', 'COURSERA', '2026'], ['Introduction to Structured Query Language (SQL) - University of Michigan', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026'],['AI Fundamentals - Google', 'COURSERA', '2026']],
 } as const
 
 export type Portfolio = typeof portfolio
