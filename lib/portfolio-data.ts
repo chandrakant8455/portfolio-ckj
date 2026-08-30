@@ -24,7 +24,7 @@ export const portfolio = {
   ],
   projects: [
     { title: 'Water Quality Awareness Tool', description: 'An interactive web application developed to increase awareness about water quality, common contaminants, and their potential health and environmental impacts. The tool presents water-related information in a simple and user-friendly way, helping users understand water quality risks and adopt safer water practices', tags: 'HTML · CSS · JavaScript / React', image: '/projects/personal-portfolio.png', githubUrl: 'https://github.com/chandrakant8455/waterqualityawarenesstool', demoUrl: 'https://dist-ehusyvpg.devinapps.com/' },
-    { title: 'Student Management System', description: 'A student management application for adding, updating, deleting and viewing student records.', tags: 'Python · File Handling / SQLite', image: '/projects/student-management.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
+    { title: 'Weather Application', description: 'A weather application that retrieves real-time weather information using an API.', tags: 'HTML · CSS · JavaScript · Weather API', image: '/projects/weather-app.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
     { title: 'To-Do List Web App', description: 'A simple productivity application for managing daily tasks.', tags: 'HTML · CSS · JavaScript', image: '/projects/todo-list.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
     { title: 'Weather Application', description: 'A weather application that retrieves real-time weather information using an API.', tags: 'HTML · CSS · JavaScript · Weather API', image: '/projects/weather-app.png', githubUrl: 'YOUR_GITHUB_REPO_URL', demoUrl: '#contact' },
   ],
