@@ -6,7 +6,7 @@ export const portfolio = {
   bio: 'Passionate about programming, artificial intelligence, machine learning, web development, and building real-world projects. Currently learning, experimenting, and improving my skills every day.',
   about: "I'm a 2nd-year B.Tech Computer Science and Engineering student interested in Artificial Intelligence, Machine Learning, software development, and problem solving. I enjoy learning new technologies and turning ideas into practical projects.",
   profileImage: '/profile-student.png',
-  resumeUrl: '#resume-placeholder',
+  resumeUrl: 'https://drive.google.com/file/d/1VhW4W8kVQu9OBsq1kp2JujprB1Zun1-k/view?usp=sharing',
   email: 'chandrakant9078@gmail.com',
   location: '[Your Location]',
   socials: { github: 'https://github.com/chandrakant8455', linkedin: 'https://www.linkedin.com/in/chandra-kanta-jena16/' },
